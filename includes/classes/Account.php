@@ -18,7 +18,6 @@ class Account
         $this->validateEmails($em, $em2);
 
         if (empty($this->errorArray)) {
-            //Insert into DB
             return true;
         } else {
             return false;
