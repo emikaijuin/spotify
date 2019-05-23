@@ -13,6 +13,7 @@ function getInputValue($name)
         echo $_POST[$name];
     }
 }
+
 ?>
 
 <!DOCTYPE html>
