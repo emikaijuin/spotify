@@ -3,10 +3,26 @@ class Account
 {
 
     private $errorArray;
+    private $con;
 
-    public function __construct()
+    public function __construct($con)
     {
+        $this->con = $con;
         $this->errorArray = array();
+    }
+
+    public function login($un, $pw)
+    {
+        $pw = md5($pw);
+
+        $query = mysqli_query($this->con, "SELECT * FROM users WHERE password='$pw' AND username='$un'");
+
+        if (mysqli_num_rows($query) == 1) {
+            return true;
+        } else {
+            array_push($this->errorArray, Constants::$loginFailed);
+            return false;
+        }
     }
 
     public function register($un, $fn, $ln, $em, $em2, $pw, $pw2)
