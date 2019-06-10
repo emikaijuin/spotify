@@ -67,7 +67,12 @@ class Account
             return;
         }
 
-        //TODO: check if username exists
+        $checkUsernameQuery = mysqli_query($this->con, "SELECT username FROM users WHERE username = '$un'");
+
+        if (mysqli_num_rows($checkUsernameQuery) != 0) {
+            array_push($this->errorArray, Constants::$usernameTaken);
+        }
+        return;
     }
 
     private function validateFirstname($fn)
