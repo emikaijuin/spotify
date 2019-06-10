@@ -1,23 +1,26 @@
 <?php
-  function sanitizeFormUsername($inputText) {
+function sanitizeFormUsername($inputText)
+{
     $inputText = strip_tags($inputText);
     $inputText = str_replace(" ", "", $inputText);
     return $inputText;
-  }
+}
 
-  function sanitizeFormString($inputText) {
+function sanitizeFormString($inputText)
+{
     $inputText = strip_tags($inputText);
     $inputText = str_replace(" ", "", $inputText);
     $inputText = ucfirst(strtolower($inputText));
     return $inputText;
-  }
+}
 
-  function sanitizeFormPassword($inputText) {
+function sanitizeFormPassword($inputText)
+{
     $inputText = strip_tags($inputText);
     return $inputText;
-  }
+}
 
-  if(isset($_POST['registerButton'])) {
+if (isset($_POST['registerButton'])) {
     $username = sanitizeFormUsername($_POST['username']);
     $firstName = sanitizeFormString($_POST['firstName']);
     $lastName = sanitizeFormString($_POST['lastName']);
@@ -26,11 +29,10 @@
     $password = sanitizeFormPassword($_POST['password']);
     $passwordConfirmation = sanitizeFormPassword($_POST['passwordConfirmation']);
 
-    $wasSuccessful = $account->register($username,$firstName,$lastName,$email,$emailConfirmation,$password,$passwordConfirmation);
+    $wasSuccessful = $account->register($username, $firstName, $lastName, $email, $emailConfirmation, $password, $passwordConfirmation);
 
     if ($wasSuccessful) {
-      header("Location: index.php");
+        $_SESSION['userLoggedIn'] = $username;
+        header("location: index.php");
     }
-  }
-
-?>
+}
