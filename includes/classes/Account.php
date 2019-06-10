@@ -34,7 +34,7 @@ class Account
         $this->validateEmails($em, $em2);
 
         if (empty($this->errorArray)) {
-            return true;
+            return $this->insertUserDetails($un, $fn, $ln, $em, $pw);
         } else {
             return false;
         }
