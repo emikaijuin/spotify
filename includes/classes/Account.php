@@ -48,6 +48,18 @@ class Account
         return "<span class='errorMessage'>$error</span>";
     }
 
+    private function insertUserDetails($un, $fn, $ln, $em, $pw)
+    {
+        $encryptedPw = md5($pw);
+        $profilePic = "assets/images/profile-pics/default_blue.jpg";
+        $date = date("Y-m-d");
+
+        $result = mysqli_query($this->con,
+            "INSERT INTO users VALUES ('', '$un', '$fn', '$ln', '$em', '$encryptedPw', '$date', '$profilePic')");
+
+        return $result;
+    }
+
     private function validateUsername($un)
     {
         if (strlen($un) > 25 || strlen($un) < 5) {
