@@ -3,11 +3,19 @@ html {
   padding: 0;
   margin: 0;
   height: 100%;
+  background-color: #181818;
+  min-width: 720px;
+  font-size: 14px;
 }
 
 * {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Cabin", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #fff;
+  letter-spacing: 1px;
+}
+
+*:focus {
+  outline-width: 0;
 }
 
 #nowPlayingBarContainer {
