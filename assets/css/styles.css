@@ -154,3 +154,290 @@ html {
 #nowPlayingRight .volumeBar .progressBar {
   width: 125px;
 }
+
+#topContainer {
+  min-height: 100%;
+  width: 100%;
+}
+
+#navBarContainer {
+  background-color: #000;
+  width: 220px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.navBar {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+}
+
+.logo {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.logo img {
+  width: 32px;
+}
+
+.logo .logoText {
+  color: #fff;
+  padding-left: 10px;
+}
+
+.logoText a {
+  text-decoration: none;
+}
+
+.navBar .group {
+  border-top: 1px solid #a0a0a0;
+  padding: 10px 0;
+}
+
+.navItem {
+  padding: 10px 0;
+  font-size: 12px;
+  font-weight: 700;
+  display: block;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.navItemLink {
+  color: #a0a0a0;
+  text-decoration: none;
+}
+
+.navItemLink:hover {
+  font-weight: 700;
+  color: #fff;
+}
+
+.navItemLink .icon {
+  position: absolute;
+  right: 0;
+  top: 6px;
+  width: 20px;
+}
+
+#mainViewContainer {
+  margin-left: 220px;
+  padding-bottom: 90px;
+  width: calc(100% - 220px);
+}
+
+#mainContent {
+  padding: 0 20px;
+}
+
+.pageHeadingBig {
+  padding: 20px;
+  text-align: center;
+}
+
+.gridViewContainer {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.gridViewItem {
+  margin: 20px;
+  min-width: 150px;
+  max-width: 200px;
+}
+
+.gridViewItem img {
+  width: 100%;
+}
+
+.gridViewInfo {
+  font-weight: 700;
+  font-size: 12px;
+  text-align: center;
+  padding: 5px 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.gridViewItem a {
+  text-decoration: none;
+}
+
+.gridViewItem a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* ALBUM PAGE */
+.entityInfo {
+  padding: 40px 0 10px 0;
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.entityInfo .leftSection {
+  width: 30%;
+  max-width: 250px;
+}
+
+.entityInfo .leftSection img {
+  width: 100%;
+}
+
+.entityInfo .rightSection {
+  width: 70%;
+  padding: 5px 10px 5px 40px;
+  box-sizing: border-box;
+}
+
+.entityInfo .rightSection h1 {
+  margin: 0px;
+  font-size: 42px;
+}
+
+.entityInfo .rightSection p {
+  margin-bottom: 6px;
+  color: #939393;
+  font-weight: 200;
+}
+
+.entityInfo .rightSection .artistLink {
+  color: #fff;
+}
+
+.entityInfo .rightSection .artistLink:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.entityInfo .rightSection div span {
+  color: #939393;
+  font-weight: 200;
+  font-size: 13px;
+}
+
+.entityInfo .rightSection div {
+  display: flex;
+}
+
+.albumControls {
+  display: flex;
+  width: 235px;
+  justify-content: space-between;
+}
+
+.albumControls .playAlbumButton,
+.albumControls .saveAlbumButton {
+  width: 110px;
+  border-radius: 100px;
+  background-color: transparent;
+  padding: 8px;
+  margin-top: 30px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.albumControls .playAlbumButton {
+  border: 0px;
+  background-color: #84bd00;
+  color: #fff;
+}
+
+.albumControls .saveAlbumButton {
+  border: 1px solid #a0a0a0;
+  background-color: transparent;
+}
+
+.trackListContainer {
+  width: 100%;
+}
+
+.trackList {
+  padding: 0;
+  margin: 0;
+}
+
+.tracklistRow {
+  height: 40px;
+  padding: 15px 10px;
+  list-style: none;
+  border-bottom: 1px solid #282828;
+}
+
+.tracklistRow span {
+  font-size: 13px;
+  color: #939393;
+}
+
+.tracklistRow:hover {
+  background-color: #282828;
+}
+
+.tracklistRow .trackCount {
+  width: 8%;
+  float: left;
+}
+
+.tracklistRow .trackCount .countNumber {
+  color: #939393;
+}
+
+.tracklistRow .trackCount img {
+  width: 20px;
+  visibility: hidden;
+  position: absolute;
+  cursor: pointer;
+}
+
+.tracklistRow:hover .trackCount img {
+  visibility: visible;
+}
+
+.tracklistRow:hover .trackCount span {
+  visibility: hidden;
+}
+
+.tracklistRow .trackInfo {
+  width: 75%;
+  float: left;
+}
+
+.tracklistRow .trackInfo span {
+  display: block;
+}
+
+.tracklistRow .trackOptions {
+  width: 5%;
+  float: left;
+  text-align: right;
+}
+
+.tracklistRow .trackOptions img {
+  width: 15px;
+  visibility: hidden;
+}
+
+.tracklistRow:hover .trackOptions img {
+  visibility: visible;
+}
+
+.tracklistRow .trackDuration {
+  width: 12%;
+  float: left;
+  text-align: right;
+}
+
+.tracklistRow .trackInfo .trackName {
+  color: #fff;
+  margin-bottom: 7px;
+}
