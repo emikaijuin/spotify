@@ -372,6 +372,8 @@ html {
   padding: 15px 10px;
   list-style: none;
   border-bottom: 1px solid #282828;
+  display: flex;
+  align-items: center;
 }
 
 .tracklistRow span {
@@ -384,7 +386,7 @@ html {
 }
 
 .tracklistRow .trackCount {
-  width: 8%;
+  width: 3%;
   float: left;
 }
 
@@ -408,7 +410,7 @@ html {
 }
 
 .tracklistRow .trackInfo {
-  width: 75%;
+  width: 80%;
   float: left;
 }
 
@@ -439,5 +441,4 @@ html {
 
 .tracklistRow .trackInfo .trackName {
   color: #fff;
-  margin-bottom: 7px;
 }
