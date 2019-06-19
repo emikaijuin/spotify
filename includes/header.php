@@ -23,9 +23,15 @@ if (isset($_SESSION['userLoggedIn'])) {
     <link href="https://fonts.googleapis.com/css?family=Cabin:200,400,700&display=swap" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="assets/js/index.js"></script>
+    <script src="assets/js/script.js"></script>
   </head>
   <body>
+
+    <script>
+      var audioElement = new Audio();
+      audioElement.setTrack("assets/music/bensound-acousticbreeze.mp3");
+      audioElement.audio.play()
+    </script>
 
     <div id="mainContainer">
       <div id="topContainer">
